@@ -1,0 +1,68 @@
+{% extends "layout.html" %} 
+
+{% block header %}
+
+
+<script type = "text/javascript" src="{{url_for('static', filename='js/my_echart.js')}}"> </script>
+
+{% endblock %}
+
+{% block content %} 
+
+<h1> {{hello}} </h1>
+
+<div id ="echart_selection" >
+
+    <label for="echartselect">Select e-chart json :</label>
+        <select id= "echartselect" name = "echartselect" onchange= "GetQueryValues(this)">
+            {% for name, option in ejsons.items() %}
+                {% if loop.first %}
+                    <option value = '{{name}}' selected = "selected"> {{ name }} </option>
+                {% else %}
+                    <option value = '{{ name }}' > {{ name }} </option>
+                {% endif %}
+            {% endfor %}
+        </select>
+</div>
+
+<div id=echart_container >
+    <div id="echart" >
+    </div>
+</div>
+
+
+<script>
+    
+    if (myChart == null) {
+        var options = JSON.parse('{{ejsons | tojson | safe }}');
+
+        sel_json = sessionStorage.getItem("sel_json");
+        if (sel_json == null){
+         var sel_json = document.getElementById("echartselect").value;
+        }
+        else{
+            $('#echartselect').val(sel_json);
+        }
+        var option = options[sel_json];
+        var myChart = echarts.init(document.getElementById('echart'),"arp_dark");
+        
+        
+        myChart.setOption(option);
+            
+    }
+    
+function GetQueryValues() {
+    
+   
+    var options = JSON.parse('{{ejsons | tojson | safe }}');
+    var sel_json = document.getElementById("echartselect").value;
+    var option = options[sel_json];
+    var myChart = echarts.getInstanceByDom(document.getElementById('echart'));
+
+    sessionStorage.setItem("sel_json", sel_json);
+    myChart.setOption(option,true);
+}
+</script>   
+
+
+{% endblock %}
