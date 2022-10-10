@@ -592,6 +592,7 @@
 					]
 				]
 			},
+			"type": "Feature", 
 			"properties": {
 				"name": "South Africa",
 				"childNum": 2
