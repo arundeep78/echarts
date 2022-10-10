@@ -1932,7 +1932,7 @@
 					]
 				]
 			},
-			'type': 'Feature',
+			"type": "Feature",
 			"properties": {
 				"name": "United States of America",
 				"childNum": 14
