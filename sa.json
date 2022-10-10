@@ -882,9 +882,8 @@
             }, 
             "type": "Feature", 
             "properties": {
-                "#layername": "Puerto Rico", 
-                "name_conv": "Puerto Rico", 
-                  }
+                "name": "Puerto Rico", 
+                 }
         },
 		{
 			"geometry": {
