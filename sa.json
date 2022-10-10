@@ -882,35 +882,9 @@
             }, 
             "type": "Feature", 
             "properties": {
-                "water_lg": "", 
-                "#style": "[MAPublisher Default Symbol]", 
-                "#verticals": 1.0, 
                 "#layername": "Puerto Rico", 
-                "#mapx": -65.270300921, 
-                "#mapy": 18.303287991, 
-                "continent": "North America", 
-                "#rotation": 0.0, 
-                "#id": -214748364, 
-                "wg_populat": 0.0, 
-                "feature": "Possession", 
-                "state": "", 
-                "#name": "[MAPublisher Default Symbol]", 
-                "#pagex": 31.869358063, 
-                "#pagey": 69.94355011, 
-                "wg_id": 0.0, 
-                "#opacity": 100, 
                 "name_conv": "Puerto Rico", 
-                "gfid": "56D4E834-9BCB-4371-928D-20F1F4260664", 
-                "fips": "USY3", 
-                "water_sm": "", 
-                "population": 0, 
-                "country": "United States", 
-                "ocean": "", 
-                "#horizonta": 1.0, 
-                "island": "Greater Antilles", 
-                "name_loc2": "", 
-                "name_loc1": ""
-            }
+                  }
         },
 		{
 			"geometry": {
